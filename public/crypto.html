@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Details</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="search-container">
+        <div id="cryptoDetails">
+            <!-- Crypto details will be loaded here -->
+        </div>
+        <button id="showGraphButton" class="graph-button">Show Evolution Graph</button>
+        <div id="graphModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal()">&times;</span>
+                <h2>Price Evolution - Last 6 Months</h2>
+                <canvas id="priceChart"></canvas>
+            </div>
+        </div>
+        
+    </div>
+    <button onclick="goBack()" class="back-button">Back</button>
+    <script src="./js/crypto.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
